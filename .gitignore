@@ -1,0 +1,7 @@
+# The next 3 lines basically let me ignore all files without any extension
+# Ignore all files
+* 
+# Except directories
+!*/
+# Except files with extensions
+!*.*

@@ -17,6 +17,16 @@ void add_arrays_avx(const float* A, const float* B, float* C, size_t size) {
     }
 }
 
+void print_array(const float* arr, size_t size)
+{
+    size_t i = 0;
+    for (; i < size; i++)
+    {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << '\n';
+}
+
 int main() {
     const size_t size = 32;  
     float A[size], B[size], C[size];
@@ -25,6 +35,10 @@ int main() {
         A[i] = i * 1.0f;
         B[i] = i * 2.0f;
     }
+
+    print_array(A, size);
+    print_array(B, size);
+
 
     add_arrays_avx(A, B, C, size);
 
